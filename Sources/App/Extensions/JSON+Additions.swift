@@ -13,8 +13,6 @@ extension JSON {
     mutating func setId(with entity: Entity) throws {
         let identifier = entity.id
         let value: Any? = identifier?.int ?? identifier?.string
-        if let value = value {
-            try set("id", value)
-        }
+        try set("id", value)
     }
 }
